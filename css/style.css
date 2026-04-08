@@ -952,9 +952,9 @@ h2 .accent {
 /* Live button (primary style) */
 .btn-live {
     position: relative;
-    background: linear-gradient(135deg, var(--green), var(--blue));
-    color: var(--bg);
-    border: none;
+    background: transparent; /* ✅ transparent */
+    color: #9b5de5; /* ✅ purple text */
+    border: 1px solid rgba(155, 93, 229, 0.5); /* ✅ purple border */
     padding: 10px 18px;
     border-radius: 8px;
     font-family: var(--mono);
@@ -966,26 +966,32 @@ h2 .accent {
     transition: all 0.3s ease;
 }
 
-/* Glow effect */
+/* 🔥 subtle glow bg */
 .btn-live::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, var(--green), var(--blue));
+    background: rgba(155, 93, 229, 0.08);
     opacity: 0;
     transition: opacity 0.3s ease;
-    filter: blur(12px);
     z-index: -1;
 }
 
-/* Hover */
+/* ✨ hover effect */
 .btn-live:hover {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.25);
+    color: #fff;
+    border-color: #9b5de5;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(155, 93, 229, 0.35);
 }
 
 .btn-live:hover::before {
-    opacity: 0.6;
+    opacity: 1;
+}
+
+/* click press */
+.btn-live:active {
+    transform: scale(0.95);
 }
 
 /* OPTIONAL: card spacing improve */
