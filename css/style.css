@@ -688,11 +688,9 @@ h2 .accent {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        transparent 35%,
-        rgba(0, 0, 0, 0.6) 100%
-    );
+    background: linear-gradient(to bottom,
+            transparent 35%,
+            rgba(0, 0, 0, 0.6) 100%);
     pointer-events: none;
     z-index: 1;
 }
@@ -794,6 +792,7 @@ h2 .accent {
     border-bottom: 2px solid var(--green);
     border-right: 2px solid var(--green);
 }
+
 /* ============================================================
    SKILLS
 ============================================================ */
@@ -1334,6 +1333,12 @@ footer {
         align-items: flex-start;
     }
 
+    /* About section */
+    .downloadCV {
+        padding: 10px 20px;
+        font-size: 0.45rem;
+    }
+
 
 }
 
@@ -1431,5 +1436,10 @@ footer {
     .t-dot {
         width: 8px;
         height: 8px;
+    }
+
+    /* About section */
+    .downloadCV {
+        padding: 6px 12px;
     }
 }
