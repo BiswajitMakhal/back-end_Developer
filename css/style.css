@@ -1033,6 +1033,7 @@ h2 .accent {
     background: transparent;
     border: 1px solid var(--border);
     color: var(--muted);
+    border-color: #6b6b80;
 }
 
 .btn-code:hover {
